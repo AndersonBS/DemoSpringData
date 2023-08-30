@@ -1,0 +1,50 @@
+// Use DBML to define your database structure
+// URL: https://dbdiagram.io/d
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table TB_CARGO {
+  CAR_ID integer [primary key]
+  CAR_NOME invarcharteger
+  CAR_SALARIO float 
+  CAR_VERSAO integer
+}
+
+Table TB_CHEFE {
+  CHE_ID integer [primary key]
+  CHE_NOME varchar
+  CHE_VERSAO integer
+}
+
+Table TB_TAREFA {
+  TAR_ID integer [primary key]
+  TAR_DESCRICAO varchar
+  TAR_VERSAO integer
+}
+
+Table TB_EMP {
+  EMP_ID integer [primary key]
+  EMP_NOME varchar
+  EMP_RUA varchar
+  EMP_NUMERO integer
+  EMP_COMPLEMENTO varchar
+  EMP_CEP varchar
+  CAR_ID integer
+  CHE_ID integer
+  EMP_VERSAO integer
+}
+
+Table TB_EMP_TAR {
+  EMP_ID integer [primary key]
+  TAR_ID integer [primary key]
+}
+
+// one-to-one
+Ref: TB_EMP.CAR_ID - TB_CARGO.CAR_ID 
+
+// many-to-one
+Ref: TB_EMP.CHE_ID > TB_CHEFE.CHE_ID 
+
+// many-to-many
+Ref: TB_EMP.EMP_ID - TB_EMP_TAR.EMP_ID 
+Ref: TB_TAREFA.TAR_ID - TB_EMP_TAR.TAR_ID
+
