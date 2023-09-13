@@ -33,6 +33,45 @@ public class Tarefa {
 	@Version
 	@Column(name = "TAR_VERSAO")
 	private int versao;
+
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public List<Empregado> getEmpregados() {
+		return empregados;
+	}
+
+	public void setEmpregados(List<Empregado> empregados) {
+		this.empregados = empregados;
+	}
+
+	public int getVersao() {
+		return versao;
+	}
+
+	public void setVersao(int versao) {
+		this.versao = versao;
+	}
+
+	@Override
+	public String toString() {
+		return "Tarefa [id=" + id + ", descricao=" + descricao + ", versao=" + versao + "]";
+	}
 	
 }
 

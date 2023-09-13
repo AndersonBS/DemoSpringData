@@ -29,6 +29,45 @@ public class Chefe {
 	@Version
 	@Column(name = "CHE_VERSAO")
 	private int versao;
+
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Set<Empregado> getEmpregados() {
+		return empregados;
+	}
+
+	public void setEmpregados(Set<Empregado> empregados) {
+		this.empregados = empregados;
+	}
+
+	public int getVersao() {
+		return versao;
+	}
+
+	public void setVersao(int versao) {
+		this.versao = versao;
+	}
+
+	@Override
+	public String toString() {
+		return "Chefe [id=" + id + ", nome=" + nome + ", versao=" + versao + "]";
+	}
 	
 }
 

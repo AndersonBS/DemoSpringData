@@ -31,5 +31,52 @@ public class Cargo {
 	@Column(name = "CAR_VERSAO")
 	private int versao;
 
+	
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public float getSalario() {
+		return salario;
+	}
+
+	public void setSalario(float salario) {
+		this.salario = salario;
+	}
+
+	public Empregado getEmpregado() {
+		return empregado;
+	}
+
+	public void setEmpregado(Empregado empregado) {
+		this.empregado = empregado;
+	}
+
+	public int getVersao() {
+		return versao;
+	}
+
+	public void setVersao(int versao) {
+		this.versao = versao;
+	}
+
+	@Override
+	public String toString() {
+		return "Cargo [id=" + id + ", nome=" + nome + ", salario=" + salario + ", versao=" + versao + "]";
+	}
+	
 }
 
